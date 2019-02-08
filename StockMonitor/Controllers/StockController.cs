@@ -31,7 +31,7 @@ namespace StockMonitor.Controllers
         public async Task<ActionResult> Details(string sym)
         {
             HttpClient client = new HttpClient();
-            HttpResponseMessage result = await client.GetAsync("http://localhost:63294/api/getbluechipbysimbol?Simbolo="+sym);
+            HttpResponseMessage result = await client.GetAsync("http://localhost:63248/api/getbluechipbysimbol?Simbolo="+sym);
             Bluechip bluechip = new Bluechip();
             if (result.IsSuccessStatusCode)
             {

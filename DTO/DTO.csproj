@@ -46,5 +46,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TrivialBlue.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\Chart.js" />
+    <Content Include="Scripts\Chart.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
