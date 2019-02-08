@@ -31,5 +31,6 @@ namespace StockAPI.Controllers
         {
             return _blue.GetBluechipBySimbol(Simbolo);
         }
+          
     }
 }
