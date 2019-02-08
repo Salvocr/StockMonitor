@@ -28,9 +28,18 @@ namespace StockMonitor.Controllers
                 return View(lstBluechips.ToList());
         }
 
-        public ActionResult Details()
+        public async Task<ActionResult> Details(string sym)
         {
-            return View();
+            HttpClient client = new HttpClient();
+            HttpResponseMessage result = await client.GetAsync("http://localhost:63294/api/getbluechipbysimbol?Simbolo="+sym);
+            Bluechip bluechip = new Bluechip();
+            if (result.IsSuccessStatusCode)
+            {
+                string content = await
+                result.Content.ReadAsStringAsync();
+                bluechip = JsonConvert.DeserializeObject<Bluechip>(content);
+            }
+            return View(bluechip);
         }
 
     }

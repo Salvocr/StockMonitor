@@ -13,9 +13,9 @@
             <div class="panel panel-default" id="panel_container">
                 <div class="panel-heading" id="panel_heading"></div>
                 <div class="panel-body" id="panel_body">
-                    <p><label>Nome</label><div id="nome"></div></p>
-                    <p><label>Nazione</label><div id="nazione"></div></p>
-                    <p><label>Simbolo</label><div id="simbolo"></div></p>
+                    <p><label>Nome</label><div id="nome">@Model.Nome</div></p>
+                    <p><label>Nazione</label><div id="nazione">@Model.Nazione</div></p>
+                    <p><label>Simbolo</label><div id="simbolo">@Model.Simbolo</div></p>
                 </div>
             </div>
         </div>
@@ -23,5 +23,22 @@
 </div>
 <script src="~/Scripts/jquery-3.3.1.js"></script>
 <script type="text/javascript">
+    $(document).ready(function ({
+        $.ajax({
+        url: "/api/getbluechips",
+        }).done(function (bluechips) {
+            va
+        }
+            
+            
+            
+            )
+
+
+
+    }))
+
+
+
     </script>
 
