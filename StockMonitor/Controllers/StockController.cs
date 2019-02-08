@@ -15,7 +15,7 @@ namespace StockMonitor.Controllers
         // GET: Stock
         public async Task<ActionResult> Index()
         {
-            //prova
+            //provaa
             HttpClient client = new HttpClient();
             HttpResponseMessage result = await client.GetAsync("http://localhost:63294/api/getbluechips");
             IEnumerable <Bluechip> lstBluechips = new List<Bluechip>();
